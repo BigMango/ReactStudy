@@ -1,0 +1,174 @@
+// "off" or 0 - turn the rule off
+// "warn" or 1 - turn the rule on as a warning (doesn"t affect exit code)
+// "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+// https://cloud.tencent.com/developer/section/1135754
+// https://github.com/AlloyTeam/eslint-config-alloy/blob/master/README.zh-CN.md
+{
+    "extends": [
+        "alloy",
+        "alloy/typescript",
+        "alloy/react"
+    ],
+    // "overrides": [
+    //     {
+    //         "files": [
+    //             "*.vue"
+    //         ],
+    //         "extends": [
+    //             "alloy",
+    //             "alloy/vue"
+    //         ],
+    //         "rules": {
+    //             "vue/no-child-content": [
+    //                 "error",
+    //                 {
+    //                     "additionalDirectives": [
+    //                         "foo"
+    //                     ] // checks v-foo directive
+    //                 }
+    //             ]
+    //         }
+    //     }
+    // ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "project": [
+            "./tsconfig.json",
+            "./packages/*/tsconfig.json"
+        ]
+    },
+    "env": {
+        // 你的环境变量（包含多个预定义的全局变量）
+        //
+        "browser": true,
+        "node": true
+        // mocha: true,
+        // jest: true,
+        // jquery: true
+    },
+    "globals": {
+        // 你的全局变量（设置为 false 表示它不允许被重新赋值）
+        //
+        // myGlobal: false
+    },
+    "rules": {
+        // 自定义你的规则
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "max-params": [
+            0,
+            5
+        ], // 函数最多只能有3个参数
+        // "eol-last": "warn", // 语句强制分号结尾
+        "semi": [
+            "error",
+            "always"
+        ],
+        "spaced-comment": [
+            "error",
+            "always",
+            { // region endregion 特殊处理
+                "line": {
+                    "markers": [
+                        "#region",
+                        "#endregion",
+                        "region",
+                        "endregion",
+                        "/"
+                    ]
+                }
+            }
+        ],
+        "no-debugger": "warn",
+        "no-return-assign": "warn",
+        "@typescript-eslint/no-useless-constructor": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-parameter-properties": "off", // 构造函数里面的参数定义
+        // "@typescript-eslint/explicit-member-accessibility": "error",
+        // "@typescript-eslint/explicit-member-accessibility": [
+        //     "off", { accessibility: "no-public" }
+        // ],
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/member-ordering": "off",
+        // "@typescript-eslint/no-inferrable-types": "off",
+        // angular 相关
+        // "@typescript-eslint/no-parameter-properties": "off",
+        "no-implicit-coercion": "warn",
+        "no-param-reassign": "warn",
+        // 临时调整为 警告
+        "@typescript-eslint/prefer-optional-chain": "warn",
+        "no-template-curly-in-string": "warn",
+        "prefer-object-spread": "off",
+        "complexity": [
+            "warn",
+            200
+        ],
+        "no-unused-expressions": "warn",
+        "@typescript-eslint/no-unused-expressions": "warn",
+        "no-case-declarations": "warn",
+        // "no-var": "error",
+        // "@typescript-eslint/no-this-alias": [
+        //     "warn",
+        //     {
+        //         "allowDestructuring": true, // Allow `const { props, state } = this`; false by default
+        //         "allowedNames": ["self"] // Allow `const self = this`; `[]` by default
+        //     }
+        // ],
+        "@typescript-eslint/no-require-imports": "warn",
+        "@typescript-eslint/typedef": "warn",
+        "new-cap": "off",
+        // "no-lone-blocks": "off",
+        "accessor-pairs": "off",
+        "getter-return": "off",
+        // 新的版本很神奇,不能识别angular的 @Component 里面的Selecotr
+        "no-undef": "off",
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "@typescript-eslint/no-invalid-this": "off",
+        // "indent": [
+        //     "error",
+        //     4,
+        //     {
+        //         "SwitchCase": 1,
+        //         "ObjectExpression": "first",
+        //         "FunctionExpression": {
+        //             "body": 1,
+        //             "parameters": 1
+        //         }
+        //     }
+        //     // {
+        //     //     "MemberExpression": 1
+        //     // }
+        //     // {
+        //     //     "FunctionExpression": {
+        //     //         "body": 1,
+        //     //         "parameters": 2
+        //     //     }
+        //     // }
+        // ] //缩进风格
+        "react/jsx-filename-extension": "off",
+        "react/jsx-props-no-spreading": "off",
+        // 很奇葩,不知道为什么到处会出现这个提示
+        "react/jsx-key": "off",
+        "react/prop-types": "off",
+        "no-use-before-define": "off",
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-plusplus": "off",
+        "no-eval": "off",
+        "no-shadow": "off",
+        "no-unused-vars": "off",
+        "no-restricted-globals": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "react/function-component-definition": "off",
+        "no-underscore-dangle": "off",
+        "react/jsx-no-useless-fragment": "Warn"
+    }
+}

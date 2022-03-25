@@ -1,0 +1,92 @@
+{
+    "name": "mango-study",
+    "version": "0.0.1",
+    "description": "Place your description here",
+    "author": "Mango <Mango@163.com>",
+    "license": "MIT",
+    "keywords": [
+        "javascript",
+        "typescript"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "default": "./dist/index.es.js"
+        }
+    },
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "dev": "vite --port 4702",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@ant-design/icons": "^4.7.0",
+        "@vesselize/react": "1.0.0",
+        "antd": "^4.18.2",
+        "buffer": "^4.9.2",
+        "core-js": "^3.6.5",
+        "inversify": "^6.0.1",
+        "inversify-inject-decorators": "^3.1.0",
+        "moment": "^2.29.1",
+        "react": "^17.0.2",
+        "react-color": "^2.19.3",
+        "react-dom": "^17.0.2",
+        "react-router": "^6.2.2",
+        "react-router-dom": "^6.2.2",
+        "reflect-metadata": "^0.1.13",
+        "rfdc": "^1.3.0",
+        "rxjs": "^6.6.7",
+        "sortablejs": "^1.14.0",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.17.0",
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/plugin-proposal-decorators": "^7.17.8",
+        "@babel/preset-react": "^7.16.7",
+        "@rollup/plugin-typescript": "^8.3.0",
+        "@types/lodash-es": "^4.17.6",
+        "@types/node": "^17.0.8",
+        "@types/react": "^17.0.38",
+        "@types/react-color": "^3.0.6",
+        "@types/react-dom": "^17.0.11",
+        "@types/sortablejs": "^1.10.7",
+        "@types/uuid": "^8.3.2",
+        "@types/vite-plugin-react-svg": "^0.2.0",
+        "@typescript-eslint/eslint-plugin": "~5.10.0",
+        "@typescript-eslint/parser": "~5.10.0",
+        "@vitejs/plugin-react": "^1.2.0",
+        "@vitejs/plugin-react-refresh": "^1.3.6",
+        "babel-plugin-import": "^1.13.3",
+        "eslint": "8.10.0",
+        "eslint-config-alloy": "^4.5.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "eslint-plugin-standard": "^4.0.0",
+        "eslint-plugin-vue": "^7.20.0",
+        "jsonschema": "^1.2.5",
+        "less": "^3.11.1",
+        "lodash-es": "^4.17.20",
+        "path": "^0.12.7",
+        "prettier": "2.5.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "sass": "^1.32.0",
+        "tslib": "^2.3.1",
+        "typescript": "~4.5.2",
+        "vite": "^2.7.10",
+        "vite-plugin-svg-icons": "^1.1.0",
+        "vite-tsconfig-paths": "^3.3.17"
+    }
+}
