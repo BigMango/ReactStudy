@@ -47,6 +47,7 @@ specifiers:
   react: ^17.0.2
   react-color: ^2.19.3
   react-dom: ^17.0.2
+  react-frame-component: 5.2.1
   react-router: ^6.2.2
   react-router-dom: ^6.2.2
   reflect-metadata: ^0.1.13
@@ -73,6 +74,7 @@ dependencies:
   react: 17.0.2
   react-color: 2.19.3_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-frame-component: 5.2.1_react-dom@17.0.2+react@17.0.2
   react-router: 6.2.2_react@17.0.2
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
   reflect-metadata: 0.1.13
@@ -3992,6 +3994,17 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
+
+  /react-frame-component/5.2.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-nrSh1OZuHlX69eWqJPiUkPT9S6/wxc4PpJV+vOQ4pHQQ8XmIsIT+utWT+nX32ZfANHZuKONA7JsWMUGT36CqaQ==}
+    peerDependencies:
+      prop-types: ^15.5.9
+      react: '>= 16.3'
+      react-dom: '>= 16.3'
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /react-is/16.13.1:

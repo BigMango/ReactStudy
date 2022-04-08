@@ -24,12 +24,12 @@ export default defineConfig({
         }
     },
     build: {
-        lib: {
-            formats: ['es'],
-            entry: path.resolve(__dirname, 'lib/index.tsx'),
-            fileName: (format) => `index.${format}.js`,
-            name: PackageData.name
-        },
+        // lib: {
+        //     formats: ['es'],
+        //     entry: path.resolve(__dirname, 'src/lib/index.ts'),
+        //     fileName: (format) => `index.${format}.js`,
+        //     name: PackageData.name
+        // },
         sourcemap: false,
         rollupOptions: {
             external: isModuleExternal,
@@ -63,7 +63,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            lib: path.resolve(__dirname, 'lib')
+            "@lib": path.resolve(__dirname, 'src/lib')
         }
     }
 });

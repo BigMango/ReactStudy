@@ -33,6 +33,11 @@ export const Home: React.FC = () => {
                     Go to About Page (Link #2)
                 </Link>
             </p>
+            <p>
+                <Link to="/iframe" state={aboutState}>
+                    Go to Iframe Page (Link #3)
+                </Link>
+            </p>
         </>
     );
 };

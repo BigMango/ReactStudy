@@ -9,21 +9,24 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Hooks } from './pages/hooks-component/Hooks';
 import 'antd/dist/antd.css';
+import { IFrameMain } from './pages/iframes/ifreme';
+window.name = 'main';
 const App = () => {
-  return (
-    <Provider container={container}>
-      <BrowserRouter>
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/di" element={<InjectDemo />} />
-            <Route path="/hooks" element={<Hooks />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </Provider>
-  );
+    return (
+        <Provider container={container}>
+            <BrowserRouter>
+                <div>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/di" element={<InjectDemo />} />
+                        <Route path="/hooks" element={<Hooks />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/iframe" element={<IFrameMain />} />
+                    </Routes>
+                </div>
+            </BrowserRouter>
+        </Provider>
+    );
 };
 
 export default App;
