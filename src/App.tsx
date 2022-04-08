@@ -10,6 +10,7 @@ import { About } from './pages/About';
 import { Hooks } from './pages/hooks-component/Hooks';
 import 'antd/dist/antd.css';
 import { IFrameMain } from './pages/iframes/ifreme';
+import { MobxMain } from './pages/mobx/mobx';
 window.name = 'main';
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                         <Route path="/hooks" element={<Hooks />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/iframe" element={<IFrameMain />} />
+                        <Route path="/mobx" element={<MobxMain />} />
                     </Routes>
                 </div>
             </BrowserRouter>

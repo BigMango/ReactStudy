@@ -1,2 +1,5 @@
 [不要过度使用React.useCallback()](https://segmentfault.com/a/1190000022651514)
 [Hooks 邂逅 Mobx，代码变得更丝滑了](https://juejin.cn/post/6930758273863778317)
+[mobx 6 + typescript 实现React状态管理 (1) -- mobx 基本使用及 Api 详解](https://blog.csdn.net/mjzhang1993/article/details/116802249)
+[封装 mobx 6 + typescript 实现React状态管理 (2) -- mobx 封装](https://blog.csdn.net/mjzhang1993/article/details/116802297)
+[封装 mobx 6 + typescript 实现React状态管理 (3) -- mobx 封装后常见场景使用案例](https://blog.csdn.net/mjzhang1993/article/details/116802345)

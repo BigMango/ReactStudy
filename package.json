@@ -25,6 +25,8 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "mobx": "^6.5.0",
+        "mobx-react": "7.3.0",
         "@ant-design/icons": "^4.7.0",
         "@vesselize/react": "1.0.0",
         "antd": "^4.18.2",
