@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useContext } from 'react';
 import { Container, interfaces } from 'inversify';
 
 const InversifyContext = React.createContext<{ container: Container | null }>({
-    container: null,
+    container: null
 });
 
 interface Props {

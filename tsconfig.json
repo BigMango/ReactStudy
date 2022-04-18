@@ -29,6 +29,7 @@
         "skipLibCheck": false,
         "importHelpers": false,
         "esModuleInterop": false,
+        "emitDecoratorMetadata": true,
         // "allowSyntheticDefaultImports": true,
         // "strict": true,
         "forceConsistentCasingInFileNames": true,

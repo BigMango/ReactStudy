@@ -10,15 +10,15 @@ interface ClassBasedIFrameComponentState {
 }
 
 export class ClassBasedIFrameComponent extends Component<ClassBasedIFrameComponentProp, ClassBasedIFrameComponentState> {
-    constructor(props) {
+    constructor(props: ClassBasedIFrameComponentProp) {
         super(props);
         this.state = {
             mountNode: null
         };
-
+        this.setContentRef = this.setContentRef.bind(this);
     }
 
-    setContentRef(contentRef) {
+    setContentRef(contentRef: HTMLIFrameElement) {
         this.setState({
             mountNode: contentRef?.contentWindow?.document?.body
         });

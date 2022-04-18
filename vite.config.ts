@@ -4,7 +4,9 @@ import typescript from '@rollup/plugin-typescript';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import react from '@vitejs/plugin-react';
 import PackageData from './package.json';
-
+import esbuildPluginTsc from 'esbuild-plugin-tsc';
+import { esbuildDecorators } from '@anatine/esbuild-decorators';
+import vueJsx from '@vue3-oop/plugin-vue-jsx';
 /**
  * Verifies if an included module is external or internal. Used to exclude
  * imports from "node_modules".
@@ -45,6 +47,7 @@ export default defineConfig({
         }
     },
     plugins: [
+        vueJsx(),
         tsconfigPaths({
             // Required, since test and build behave differently
             projects:
@@ -63,7 +66,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            "@lib": path.resolve(__dirname, 'src/lib')
+            '@lib': path.resolve(__dirname, 'src/lib')
         }
     }
 });

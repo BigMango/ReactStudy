@@ -43,6 +43,14 @@ export const Home: React.FC = () => {
                     Go to Mobx Page (Link #4)
                 </Link>
             </p>
+
+            <p>
+                <Link to="/error" state={aboutState}>
+                    Go to Error Page (Link #5)
+                </Link>
+            </p>
+
+
         </>
     );
 };

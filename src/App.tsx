@@ -11,6 +11,8 @@ import { Hooks } from './pages/hooks-component/Hooks';
 import 'antd/dist/antd.css';
 import { IFrameMain } from './pages/iframes/ifreme';
 import { MobxMain } from './pages/mobx/mobx';
+import { ErrorMain } from './pages/error-component/error-main';
+
 window.name = 'main';
 const App = () => {
     return (
@@ -24,6 +26,7 @@ const App = () => {
                         <Route path="/about" element={<About />} />
                         <Route path="/iframe" element={<IFrameMain />} />
                         <Route path="/mobx" element={<MobxMain />} />
+                        <Route path="/error" element={<ErrorMain name='Error' uid='111' layout='ddd' />} />
                     </Routes>
                 </div>
             </BrowserRouter>

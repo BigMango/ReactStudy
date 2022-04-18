@@ -34,8 +34,7 @@
         "ecmaVersion": 12,
         "sourceType": "module",
         "project": [
-            "./tsconfig.json",
-            "./packages/*/tsconfig.json"
+            "./tsconfig.eslint.json"
         ]
     },
     "env": {
