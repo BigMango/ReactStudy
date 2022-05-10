@@ -1,61 +1,61 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "target": "es2020",
-        "module": "es2020",
-        "strict": false,
-        "sourceMap": true,
-        "declaration": false,
-        "downlevelIteration": true,
-        "experimentalDecorators": true,
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        // 临时处理
-        "noImplicitAny": false,
-        "allowSyntheticDefaultImports": true,
-        "baseUrl": "./",
-        "outDir": "./dist",
-        // "rootDirs": [
-        //     "./src",
-        //     "../../WebFrontFramework/packages/"
-        // ],
-        // "target": "ESNext",
-        "lib": [
-            "DOM",
-            "DOM.Iterable",
-            "ESNext"
-        ],
-        "allowJs": false,
-        "skipLibCheck": false,
-        "importHelpers": false,
-        "esModuleInterop": false,
-        "emitDecoratorMetadata": true,
-        // "allowSyntheticDefaultImports": true,
-        // "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        // "sourceMap": false,
-        // "module": "ESNext",
-        // "moduleResolution": "Node",
-        // "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "jsx": "react",
-        "paths": {
-            "@lib": [
-                "src/lib"
-            ],
-            "@lib/*": [
-                "src/lib/*"
-            ]
-        }
-    },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.js",
-        "src/**/*.tsx",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "strict": false,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    // 临时处理
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    // "rootDirs": [
+    //     "./src",
+    //     "../../WebFrontFramework/packages/"
+    // ],
+    // "target": "ESNext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+    "allowJs": false,
+    "skipLibCheck": false,
+    "importHelpers": false,
+    "esModuleInterop": false,
+    "emitDecoratorMetadata": true,
+    // "allowSyntheticDefaultImports": true,
+    // "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    // "sourceMap": false,
+    // "module": "ESNext",
+    // "moduleResolution": "Node",
+    // "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "paths": {
+      "@lib": [
+        "src/lib"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

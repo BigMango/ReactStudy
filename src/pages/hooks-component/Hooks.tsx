@@ -3,9 +3,11 @@ import React from 'react';
 import { ForwardRefMain } from './Forwarding';
 import { BadCallback, GoodCallback } from './UseCallback';
 import { BadMemo, GoodMemo } from './UseMemo';
+import HooksLifeCycle from './life-cycle';
 export function Hooks() {
   return (
     <>
+      <HooksLifeCycle />
       <Divider plain>Call Back</Divider>
       <div>
         <BadCallback />
