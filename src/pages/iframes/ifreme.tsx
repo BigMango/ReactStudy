@@ -7,67 +7,71 @@ import { WithClonedStyles } from './with-cloned-styles';
 // https://codesandbox.io/s/react-iframe-examples-36k1x?fontsize=14&hidenavigation=1&theme=dark&file=/src/examples/class-based.js
 
 interface IfremaContentProp {
-    Content: string;
+  Content: string;
 }
 
 class IfremaContent extends React.PureComponent<IfremaContentProp> {
-    render() {
-        return (
-            <>
-                <h2>{this.props.Content}</h2>
-                <p>window:{window?.name}</p>
-            </>);
-    }
+  render() {
+    return (
+      <>
+        <h2>{this.props.Content}</h2>
+        <p>window:{window?.name}</p>
+      </>);
+  }
 }
 
 export class IFrameMain extends React.Component {
-    render() {
-        return (
-            <div>
-                <IFrameSrcDoc />
-                <ClassIframe content='<h1>SimpleIframe</h1>' />
-                <FunctionalIFrameComponent title="FunctionalIFrameComponent">
-                    {/* <h1>IFrameHooks</h1> */}
-                    <IfremaContent Content='Functional iframe component' />
-                </FunctionalIFrameComponent>
-                <ClassBasedIFrameComponent title="ClassBasedIFrameComponent">
-                    {/* <h1>IFrameHooks</h1> */}
-                    <IfremaContent Content="Class based iframe component" />
-                </ClassBasedIFrameComponent>
-                <link
-                    data-frame
-                    rel="stylesheet"
-                    href="/src/pages/iframes/external.css" />
+  constructor(props) {
+    super(props);
+    window.name = 'main';
+  }
+  render() {
+    return (
+      <div>
+        <IFrameSrcDoc />
+        <ClassIframe content='<h1>SimpleIframe</h1>' />
+        <FunctionalIFrameComponent title="FunctionalIFrameComponent">
+          {/* <h1>IFrameHooks</h1> */}
+          <IfremaContent Content='Functional iframe component' />
+        </FunctionalIFrameComponent>
+        <ClassBasedIFrameComponent title="ClassBasedIFrameComponent">
+          {/* <h1>IFrameHooks</h1> */}
+          <IfremaContent Content="Class based iframe component" />
+        </ClassBasedIFrameComponent>
+        <link
+          data-frame
+          rel="stylesheet"
+          href="/src/pages/iframes/external.css" />
 
-                <WithClonedStyles title="with-cloned-styles" styleSelector="link[data-frame]">
-                    <>
-                        <p className="external">
-                            secure-box:/ guest$ ../
-                        </p>
-                        <IfremaContent Content="With cloned styles" />
-                    </>
-                </WithClonedStyles>
-            </div>
-        );
-    }
+        <WithClonedStyles title="with-cloned-styles" styleSelector="link[data-frame]">
+          <>
+            <p className="external">
+              secure-box:/ guest$ ../
+            </p>
+            <IfremaContent Content="With cloned styles" />
+          </>
+        </WithClonedStyles>
+      </div>
+    );
+  }
 }
 
 class IFrameSrcDoc extends React.PureComponent {
-    myHTML = '<h1>Hello World</h1>';
+  myHTML = '<h1>Hello World</h1>';
 
-    render() {
-        return (
-            <iframe srcDoc={this.myHTML} />
-        );
-    }
+  render() {
+    return (
+      <iframe srcDoc={this.myHTML} />
+    );
+  }
 }
 
 interface SimpleIframeProp {
-    content: string;
+  content: string;
 }
 class ClassIframe extends Component<SimpleIframeProp, any> {
-    render() {
-        const parseHtml = html => new DOMParser().parseFromString(html, 'text/html').body.innerText;
-        return <iframe srcDoc={parseHtml(this.props.content)} />;
-    }
+  render() {
+    const parseHtml = html => new DOMParser().parseFromString(html, 'text/html').body.innerText;
+    return <iframe srcDoc={parseHtml(this.props.content)} />;
+  }
 }

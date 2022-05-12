@@ -20,8 +20,18 @@ export const Home: React.FC = () => {
     <>
       <h1>Home Page</h1>
       <p>
+        <Link to="/about" state={aboutState}>
+          Go to About Page (Link #{++index})
+        </Link>
+      </p>
+      <p>
         <Link to="/di" state={data1}>
           Go to DI Page (Link #{++index})
+        </Link>
+      </p>
+      <p>
+        <Link to="/context">
+          Go to Context Page (Link #{++index})
         </Link>
       </p>
       <p>
@@ -34,11 +44,7 @@ export const Home: React.FC = () => {
           Go to Hooks Page (Link #{++index})
         </Link>
       </p>
-      <p>
-        <Link to="/about" state={aboutState}>
-          Go to About Page (Link #{++index})
-        </Link>
-      </p>
+
       <p>
         <Link to="/iframe" state={aboutState}>
           Go to Iframe Page (Link #{++index})

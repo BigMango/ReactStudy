@@ -13,6 +13,7 @@ import { IFrameMain } from './pages/iframes/ifreme';
 import { MobxMain } from './pages/mobx/mobx';
 import { ErrorMain } from './pages/error-component/error-main';
 import { ClassComponent } from './pages/class-component/class-main';
+import { ContextMain } from './pages/context/context-main';
 
 window.name = 'main';
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/iframe" element={<IFrameMain />} />
             <Route path="/mobx" element={<MobxMain />} />
             <Route path="/error" element={<ErrorMain name='Error' uid='111' layout='ddd' />} />
+            <Route path="/context" element={<ContextMain />} />
           </Routes>
         </div>
       </BrowserRouter>
